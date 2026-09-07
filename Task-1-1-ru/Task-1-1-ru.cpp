@@ -1,4 +1,4 @@
-// Task-1-1-ru.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Task-1-1-ru.cpp : Этот файл содержит функцию "main". Здесь начинается и завержается выполнение программы.
 //
 
 #include <iostream>
@@ -10,7 +10,9 @@ int main(int argc, char* args[])
     unsigned int k; // количество блоков на башню
     unsigned int t; // Максимальное количество башен
     unsigned int b; // Количесво использованных блоков
-    std::locale rus_locale = std::locale("russian.65001"); // русская локаль для терминала Windows 11
+    // Установка русской локали для терминала Windows 11
+    setlocale(LC_ALL, "russian.65001"); // 1 - й способ
+    std::locale rus_locale = std::locale("russian.65001"); // 2 - й способ
     std::cout.imbue(std::locale::global(rus_locale)); // Выбор кодировки терминала
     /*Ввод значений переменных с клавиатуры*/
     std::cout << "Введите количество блоков: ";
@@ -26,13 +28,15 @@ int main(int argc, char* args[])
     return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+// Запуск прораммы: Ctrl + F5 или пункт меню "Отладка > Запуск без отладки"
+// Отладка программы: F5 или пункт меню "Отладка > Запуск отладки"
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+// Советы по началу работы:
+// 1. Используйте окно «Обозреватель решений» для добавления/управления файлами.
+// 2. Используйте окно «Обозреватель команд» для подключения к системе контроля версий.
+// 3. Используйте окно «Вывод», чтобы просмотреть результаты сборки и другие сообщения.
+// 4. Используйте окно «Список ошибок», чтобы просмотреть ошибки.
+// 5. Перейдите в меню «Проект» > «Добавить новый элемент», 
+//    чтобы создать новые файлы кода, или в меню «Проект» > «Добавить существующий элемент», 
+//    чтобы добавить существующие файлы кода в проект
+// 6. В будущем, чтобы снова открыть этот проект, перейдите в меню «Файл» > «Открыть» > «Проект» и выберите файл .sln

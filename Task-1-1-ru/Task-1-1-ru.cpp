@@ -13,7 +13,7 @@ int main(int argc, char* args[])
     // Установка русской локали для терминала Windows 11
     system("chcp 65001 >nul");// 1-й способ. Выплнить внешнюю команду.
     setlocale(LC_ALL, "russian.65001"); // 2 - й способ. Вызов библиотечной функции
-    std::locale rus_locale = std::locale("russian.65001"); // 3 - й способ
+    std::locale rus_locale = std::locale("russian.65001"); // 3 - й способ. Переменная типа локаль
     std::cout.imbue(std::locale::global(rus_locale)); // Выбор кодировки терминала
     /*Ввод значений переменных с клавиатуры*/
     std::cout << "Введите количество блоков: ";
